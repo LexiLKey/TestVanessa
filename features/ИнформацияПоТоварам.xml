@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<selection>
+		<item xsi:type="SelectedItemField">
+			<field>File</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Item</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>ItemKey</field>
+		</item>
+		<item xsi:type="SelectedItemField">
+			<field>Barcode</field>
+		</item>
+	</selection>
+	<conditionalAppearance>
+		<item>
+			<selection>
+				<item>
+					<field>File</field>
+				</item>
+			</selection>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">SerialLotNumber</left>
+					<comparisonType>NotFilled</comparisonType>
+				</item>
+			</filter>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>PictureOutput</dcscor:parameter>
+					<dcscor:value xsi:type="DataCompositionPictureOutputType">OutputByRef</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>PictureSize</dcscor:parameter>
+					<dcscor:value xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet" xsi:type="mxl:PictureSize">Stretch</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</item>
+		<item>
+			<selection>
+				<item>
+					<field>Barcode</field>
+				</item>
+			</selection>
+			<filter/>
+			<appearance>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>Placement</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Wrap</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>MaximumHeight</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">50</dcscor:value>
+				</dcscor:item>
+			</appearance>
+			<useInOverall>DontUse</useInOverall>
+			<useInFieldsHeader>DontUse</useInFieldsHeader>
+			<useInHeader>DontUse</useInHeader>
+			<useInParameters>DontUse</useInParameters>
+			<useInFilter>DontUse</useInFilter>
+			<useInResourceFieldsHeader>DontUse</useInResourceFieldsHeader>
+			<useInOverallHeader>DontUse</useInOverallHeader>
+			<useInOverallResourceFieldsHeader>DontUse</useInOverallResourceFieldsHeader>
+		</item>
+	</conditionalAppearance>
+	<outputParameters>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>HorizontalOverallPlacement</dcscor:parameter>
+			<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+		</dcscor:item>
+		<dcscor:item xsi:type="SettingsParameterValue">
+			<dcscor:parameter>VerticalOverallPlacement</dcscor:parameter>
+			<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+		</dcscor:item>
+	</outputParameters>
+	<item xsi:type="StructureItemGroup">
+		<groupItems>
+			<item xsi:type="GroupItemField">
+				<field>Item</field>
+				<groupType>Items</groupType>
+				<periodAdditionType>None</periodAdditionType>
+				<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+				<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+			</item>
+		</groupItems>
+		<order>
+			<item xsi:type="OrderItemAuto"/>
+		</order>
+		<selection>
+			<item xsi:type="SelectedItemAuto"/>
+		</selection>
+		<item xsi:type="StructureItemGroup">
+			<groupItems>
+				<item xsi:type="GroupItemField">
+					<field>ItemKey</field>
+					<groupType>Items</groupType>
+					<periodAdditionType>None</periodAdditionType>
+					<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+					<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+				</item>
+			</groupItems>
+			<filter>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ItemKey</left>
+					<comparisonType>Filled</comparisonType>
+				</item>
+			</filter>
+			<order>
+				<item xsi:type="OrderItemAuto"/>
+			</order>
+			<selection>
+				<item xsi:type="SelectedItemAuto"/>
+			</selection>
+			<outputParameters>
+				<dcscor:item xsi:type="SettingsParameterValue">
+					<dcscor:parameter>FilterOutput</dcscor:parameter>
+					<dcscor:value xsi:type="DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</outputParameters>
+			<item xsi:type="StructureItemGroup">
+				<groupItems>
+					<item xsi:type="GroupItemField">
+						<field>SerialLotNumber</field>
+						<groupType>Items</groupType>
+						<periodAdditionType>None</periodAdditionType>
+						<periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionBegin>
+						<periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</periodAdditionEnd>
+					</item>
+				</groupItems>
+				<filter>
+					<item xsi:type="FilterItemComparison">
+						<left xsi:type="dcscor:Field">SerialLotNumber</left>
+						<comparisonType>Filled</comparisonType>
+					</item>
+				</filter>
+				<order>
+					<item xsi:type="OrderItemAuto"/>
+				</order>
+				<selection>
+					<item xsi:type="SelectedItemField">
+						<field>SerialLotNumber</field>
+					</item>
+					<item xsi:type="SelectedItemField">
+						<field>Barcode</field>
+					</item>
+				</selection>
+				<outputParameters>
+					<dcscor:item xsi:type="SettingsParameterValue">
+						<dcscor:parameter>FilterOutput</dcscor:parameter>
+						<dcscor:value xsi:type="DataCompositionTextOutputType">DontOutput</dcscor:value>
+					</dcscor:item>
+				</outputParameters>
+			</item>
+		</item>
+	</item>
+</Settings>
