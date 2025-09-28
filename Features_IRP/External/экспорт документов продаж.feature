@@ -4,10 +4,10 @@
 @ExportScenarios
 @IgnoreOnCIMainBuild
 
-Функционал: экспорт документов продаж
+Функционал: экспорт данных продаж
 
 
-Сценарий: экспорт документов продаж
+Сценарий: экспорт данных продаж
 
 	И я проверяю или создаю для справочника "RowIDs" объекты:
 		| 'Ref'                                                            | 'DeletionMark' | 'Code' | 'Description'                          | 'AgreementSales' | 'Company'                                                           | 'CurrencySales' | 'LegalNameSales' | 'PartnerSales' | 'PriceIncludeTaxSales' | 'Store'                                                          | 'Unit'                                                          | 'ItemKey'                                                          | 'Branch'                                                                | 'Basis'                                                                  | 'RowID'                                | 'ProcurementMethod' | 'StoreSender' | 'StoreReceiver' | 'TransactionTypeSC'                                        | 'TransactionTypeGR'                          | 'TransactionType'                            | 'Requester' | 'AgreementPurchases'                                                 | 'PartnerPurchases'                                                 | 'LegalNamePurchases'                                                | 'PriceIncludeTaxPurchases' | 'CurrencyPurchases'                                                  |
